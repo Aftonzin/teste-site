@@ -1,6 +1,4 @@
-teste
-
-
-parça
-
-eewe
+/*
+  hehe
+*/
+window.alert('Bem vindo(a)!')
