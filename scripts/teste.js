@@ -1,4 +1,5 @@
 /*
   hehe
 */
-window.alert('Bem vindo(a)!')
+var nome = window.prompt('Qual seu nome')
+window.alert('Bem vindo(a) ' + nome + '!')
