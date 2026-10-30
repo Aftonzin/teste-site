@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Horário</title>
+
+        <style>
+            body
+                {
+                background-color: rgb(172, 131, 91);
+                }
+
+            div#titulo
+                {
+                font:italic 20pt Arial;
+                color: azure;
+                text-align: center;
+                margin-top: 4%;
+                }
+
+            h2#texto
+                {
+                color: azure;
+                text-align: center;
+                }
+
+            p#horario
+                {
+                color: azure;
+                text-align: center;
+                margin-top: -2%;
+                }
+
+            img#imagem
+                {
+                height: 400px;
+                margin-left: 10%;
+                }
+
+            section
+                {
+                margin: 0% auto;
+                width: 500px;
+                height: 500px;
+                background-color: rgb(133, 69, 46);
+                }
+        </style>
+    </head>
+
+
+    <body id="body">
+        <div id="titulo">Horário atual</div>
+
+        <section id="section">
+            <h2 id="texto">Bom algo</h2>
+            <p id="horario">Agora é algo algo algo algo placeholder</p>
+            <img id="imagem" alt="1">
+        </section>
+        <img src="" alt="">
+        
+    </body>
+
+    <script>
+
+        var agora = new Date()
+        var hora = agora.getHours()
+        var minuto = agora.getMinutes()
+
+        if (0 < hora)
+            {
+                document.getElementById('body').style.backgroundColor = "lightblue"
+                document.getElementById('section').style.backgroundColor = "rgb(133, 69, 46)"
+
+                var text = document.getElementById('texto');
+                var horar = document.getElementById('horario');
+                var imag = document.getElementById('imagem');
+
+                text.innerHTML = `Bom dia!`
+                horar.innerHTML = `Agora são ${hora}:${minuto} da manhã.`
+                imag.src = "imgs/amanhecer.png";
+            }
+
+        if (hora > 12)
+            {
+                document.getElementById('body').style.backgroundColor = "rgb(172, 131, 91)"
+                document.getElementById('section').style.backgroundColor  = "rgb(190, 70, 20)"
+
+                var text = document.getElementById('texto')
+                var horar = document.getElementById('horario')
+                var imag = document.getElementById('imagem')
+
+                text.innerHTML = `Boa tarde!`
+                horar.innerHTML = `Agora são ${hora}:${minuto} da tarde.`
+                imag.src = "imgs/entardecer.png"
+            }
+        
+        if (hora > 18)
+            {
+                document.getElementById('body').style.backgroundColor = "rgb(60, 60, 80)"
+                document.getElementById('section').style.backgroundColor = "rgb(30, 30, 30)"
+
+                var text = document.getElementById('texto')
+                var horar = document.getElementById('horario')
+                var imag = document.getElementById('imagem')
+
+                text.innerHTML = `Boa noite!`
+                horar.innerHTML = `Agora são ${hora}:${minuto} da noite.`
+                imag.src = "imgs/noite.png"
+            }
+    </script>
+
+
+
+</html>
