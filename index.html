@@ -75,7 +75,7 @@
         var hora = agora.getHours()
         var minuto = agora.getMinutes()
 
-        if (0 < hora)
+        if (0 <= hora)
             {
                 document.getElementById('body').style.backgroundColor = "lightblue"
                 document.getElementById('section').style.backgroundColor = "rgb(133, 69, 46)"
@@ -89,7 +89,7 @@
                 imag.src = "imgs/amanhecer.png";
             }
 
-        if (hora > 12)
+        if (hora >= 12)
             {
                 document.getElementById('body').style.backgroundColor = "rgb(172, 131, 91)"
                 document.getElementById('section').style.backgroundColor  = "rgb(190, 70, 20)"
