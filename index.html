@@ -65,7 +65,7 @@
             <p id="horario">Agora é algo algo algo algo placeholder</p>
             <img id="imagem" alt="1">
         </section>
-        <img src="" alt="IMAGEM">
+        <img src="" alt="">
         
     </body>
 
@@ -78,6 +78,10 @@
         if (hora < 10)
             {
                 var hora = '0'+hora
+            }
+        if (minuto < 10)
+            {
+                var minuto = '0'+minuto
             }
 
         if (0 <= hora)
