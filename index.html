@@ -65,7 +65,7 @@
             <p id="horario">Agora é algo algo algo algo placeholder</p>
             <img id="imagem" alt="1">
         </section>
-        <img src="" alt="">
+        <img src="" alt="IMAGEM">
         
     </body>
 
@@ -74,6 +74,11 @@
         var agora = new Date()
         var hora = agora.getHours()
         var minuto = agora.getMinutes()
+
+        if hora > 10
+            {
+                var hora = '0'+hora
+            }
 
         if (0 <= hora)
             {
